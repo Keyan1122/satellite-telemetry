@@ -71,7 +71,6 @@ credentials.json
 
 # Datasets
 data/
-!data/labeled_anomalies.csv
 
 # Example of files that might be generated during execution
 *.txt
