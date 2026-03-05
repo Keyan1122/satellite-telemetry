@@ -1,0 +1,40 @@
+{
+    "seed": 3,
+    "mode": "mc_dropout",
+    "AUROC": 0.4168475740096925,
+    "PR_AUC": 0.08719579928245857,
+    "thresholds": {
+        "percentile": 2.5737730264663696,
+        "roc_optimal": 3.060804605484009,
+        "risk_based": 2.5945653689443136
+    },
+    "threshold_metrics": {
+        "percentile": {
+            "precision": 0.06619385342789598,
+            "recall": 0.031180400890868598,
+            "f1": 0.04239212717638153,
+            "false_alarm_rate": 0.05226250330775337,
+            "detection_delay_mean": 97.0,
+            "missed_events": 2,
+            "total_events": 3
+        },
+        "roc_optimal": {
+            "precision": 0.1323529411764706,
+            "recall": 0.0200445434298441,
+            "f1": 0.03481624758220503,
+            "false_alarm_rate": 0.015612595924847844,
+            "detection_delay_mean": 123.0,
+            "missed_events": 2,
+            "total_events": 3
+        },
+        "risk_based": {
+            "precision": 0.06053268765133172,
+            "recall": 0.02783964365256125,
+            "f1": 0.03813882532418002,
+            "false_alarm_rate": 0.05133633236305901,
+            "detection_delay_mean": 97.0,
+            "missed_events": 2,
+            "total_events": 3
+        }
+    }
+}

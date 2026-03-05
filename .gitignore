@@ -49,6 +49,7 @@ venv/
 *.ini
 *.cfg
 *.json
+!results/**/*.json
 *.yaml
 
 # Large data files or models
@@ -70,11 +71,8 @@ credentials.json
 
 # Datasets
 data/
-
-# Output files
-output/
-results/
+!data/labeled_anomalies.csv
 
 # Example of files that might be generated during execution
-*.csv
 *.txt
+*.md
