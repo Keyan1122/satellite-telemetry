@@ -1,0 +1,80 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyd
+*.pyo
+
+# Distribution / packaging
+.Python
+build/
+dist/
+wheels/
+*.egg-info/
+
+# Installer logs
+*.log
+*.scheme
+
+# Unit test / coverage reports
+.coverage
+.tox/
+.pytest_cache/
+htmlcov/
+
+# Virtual environment
+env/
+venv/
+
+# Editor backup files
+*~
+
+# macOS specific files
+.DS_Store
+
+# Jupyter/IPython Notebook
+.ipynb_checkpoints
+
+# MyPy
+.mypy_cache/
+
+# Debugging
+.spyderproject
+.spyproject
+
+# IDE specific files
+.vscode/
+.idea/
+
+# User-specific configuration files
+*.ini
+*.cfg
+*.json
+*.yaml
+
+# Large data files or models
+*.pkl
+*.pt
+*.bin
+*.npy
+*.zip
+
+# Logs
+logs/
+*.log
+
+# Credentials and sensitive information
+*.env
+.env.*
+config.py
+credentials.json
+
+# Datasets
+data/
+
+# Output files
+output/
+results/
+
+# Example of files that might be generated during execution
+*.csv
+*.txt
