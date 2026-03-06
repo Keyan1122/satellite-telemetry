@@ -1,3 +1,4 @@
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.pyc
@@ -32,7 +33,7 @@ venv/
 .DS_Store
 
 # Jupyter/IPython Notebook
-.ipynb_checkpoints
+.ipynb_checkpoints/
 
 # MyPy
 .mypy_cache/
@@ -57,7 +58,7 @@ venv/
 *.pt
 *.bin
 *.npy
-*.zipgi
+*.zip
 
 # Logs
 logs/
@@ -70,8 +71,8 @@ config.py
 credentials.json
 
 # Datasets
-!data/labeled_anomalies.csv
 data/
+!data/labeled_anomalies.csv
 
 # Example of files that might be generated during execution
 *.txt
