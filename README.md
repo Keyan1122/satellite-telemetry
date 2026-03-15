@@ -19,19 +19,67 @@ This project implements an LSTM autoencoder model designed to detect anomalies i
 
 ```
 satellite-telemetry/
-├── main.py                      # Main entry point with CLI
-├── data/                        # Data directory
-│   └── labeled_anomalies.csv   # Labeled anomaly data
-├── results/                     # Output directory for results
-├── src/
-│   ├── utils.py               # Utility functions (seed setting, etc.)
-│   ├── data_loader.py         # Data loading and preprocessing
-│   ├── model.py               # LSTM Autoencoder model definition
-│   ├── train.py               # Training pipeline
-│   ├── evaluate.py            # Evaluation metrics and procedures
-│   ├── aggregate_results.py   # Multi-seed results aggregation
-│   └── visualization.py       # Plotting and visualization utilities
+├── main.py                          # Main entry point with CLI
+├── requirements.txt                 # Python dependencies (pip)
+├── data/                            # Data directory
+│   └── labeled_anomalies.csv       # Labeled anomaly data
+├── results/                         # Output directory for results
+│   ├── aggregated/                  # Aggregated results across all seeds
+│   ├── seed_0/                      # Results for seed 0
+│   ├── seed_1/                      # Results for seed 1
+│   ├── seed_2/                      # Results for seed 2
+│   ├── seed_3/                      # Results for seed 3
+│   ├── seed_4/                      # Results for seed 4
+│   └── seed_42/                     # Results for seed 42
+├── src/                             # Source code directory
+│   ├── __init__.py                  # Package initialization
+│   ├── utils.py                     # Utility functions (seed setting, etc.)
+│   ├── data_loader.py               # Data loading and preprocessing
+│   ├── model.py                     # LSTM Autoencoder model definition
+│   ├── train.py                     # Training pipeline
+│   ├── evaluate.py                  # Evaluation metrics and procedures
+│   ├── aggregate_results.py         # Multi-seed results aggregation
+│   ├── mc_dropout.py                # Monte Carlo Dropout utilities
+│   ├── metrics.py                   # Custom evaluation metrics
+│   ├── visualization.py             # Plotting and visualization utilities
+│   ├── simulation.py                # Simulation utilities
+│   ├── statistics.py                # Statistical analysis tools
+│   ├── generate_results_table.py    # Results table generation
+│   └── run_significance.py          # Significance testing
 └── .gitignore
+
+### Requirements
+
+The project dependencies are specified in `requirements.txt`:
+
+```
+# Core numerical & data handling
+numpy>=1.23
+pandas>=1.5
+
+# Machine learning & evaluation
+scikit-learn>=1.2
+
+# Deep learning (LSTM Autoencoder + MC Dropout)
+torch>=2.0
+torchvision>=0.15
+
+# Visualization
+matplotlib>=3.7
+seaborn>=0.12
+
+# Utilities
+tqdm>=4.65
+pyyaml>=6.0
+```
+
+### Results Directory Structure
+
+The `results/` directory contains outputs from multi-seed experiments:
+
+- **aggregated/**: Contains aggregated statistics and analyses across all seed experiments
+- **seed_0/, seed_1/, seed_2/, seed_3/, seed_4/, seed_42/**: Individual directories for each seed's training and evaluation results, including models, metrics, and visualizations
+
 ```
 
 ## 🚀 Quick Start
@@ -44,7 +92,7 @@ git clone https://github.com/Keyan1122/satellite-telemetry.git
 cd satellite-telemetry
 
 # Install dependencies
-pip install torch pandas numpy scikit-learn matplotlib
+pip install -r requirements.txt
 ```
 
 ### Usage
